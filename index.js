@@ -21,7 +21,7 @@ if (isNaN(p2)) {
     p2=0;
 
 }
-p3 = parseInt(prompt("How many sodas do you want?"));
+p3 = parseInt(prompt("How many drinks do you want?"));
 
 if (isNaN(p3)) {
     alert("Please enter number");
