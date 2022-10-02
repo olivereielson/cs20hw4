@@ -3,30 +3,36 @@
 // drinks are ($1.50 each)
 
 
-console.log("start");
 x = [];
 
+// ask the user for the data and check that it is a number
 p1 = parseInt(prompt("How many Hot Dogs do you want?"));
 
 if (isNaN(p1)) {
     alert("Please enter number");
+    p1=0;
+
 }
 
 p2 = parseInt(prompt("How many fries do you want?"));
 
 if (isNaN(p2)) {
     alert("Please enter number");
+    p2=0;
+
 }
 p3 = parseInt(prompt("How many sodas do you want?"));
 
 if (isNaN(p3)) {
     alert("Please enter number");
+    p3=0;
 }
-
+//add to array
 x.push(p1);
 x.push(p2);
 x.push(p3);
 
+//do some math
 var drink_cost = 1.5 * x.at(2);
 var dog_cost = 4.25 * x.at(0);
 var fries_cost = 2.6 * x.at(1);
@@ -39,6 +45,7 @@ if(sub_total_cost>20){
 var tax_cost = sub_total_cost * 0.0625;
 var total_cost=sub_total_cost-discount_cost+tax_cost;
 
+//set values on the screen
 document.getElementById("hotdog").innerText="HotDogs x"+x.at(0);
 document.getElementById("hotdog_cost").innerText="$"+dog_cost.toFixed(2);
 
