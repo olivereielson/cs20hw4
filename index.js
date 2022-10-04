@@ -9,13 +9,13 @@ Number.prototype.toFixed = function (num) {
         return "NaN";
     }
     //round the number using math
-    let y = Math.round((x * 100) / 100);
+    let y = Math.round(((x) * 100))/100;
     //if has 2 trailing 0 then fix it
-    if (y % 1 == 0) {
+    if (x % 1 == 0) {
         return y + ".00";
     }
     //if one trailing 0 then fix it
-    if ((y * 10) % 1 == 0) {
+    if ((x * 10) % 1 === 0) {
         return y+"0";
     }
     //is nothing is wrong do nothing
